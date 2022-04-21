@@ -1,1 +1,0 @@
-import{ServiceManager as e,serviceManager as r}from"./services.js";self.Services=self.Services||{},Services=Services||{},Services.ServiceManager=e.ServiceManager,Services.ServiceManager.Service=e.Service,Services.serviceManager=r;
