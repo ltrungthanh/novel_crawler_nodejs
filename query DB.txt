@@ -1,0 +1,27 @@
+db.getCollection('chapters').aggregate([
+{ $sort : { crawler_date : -1 } },
+{ $skip: 0 },
+{ $limit: 100 },
+   {
+      $group: { _id:  "$comic", count: {$sum:1},   chapters:{$push:{crawler_date: "$crawler_date",  chapter_name : "$chapter_name", chapter_id : "$chapter_id"}}, crawler_list:{$push:"$crawler_date"} }
+   },
+    {
+        $project:{comic : true,chapters:true,_id:true, crawler_list:true}
+    }
+])
+
+db.collection.aggregate([
+{$unwind:"$location"},
+{$group:{"_id":"$location","count":{$sum:1}}},
+{$group:{"_id":null,"location_details":{$push:{"location":"$_id",
+                                               "count":"$count"}}}},
+{$project:{"_id":0,"location_details":1}}
+])
+
+db.topics.find({name: { '$regex': 'che', '$options': 'i' }}, {})
+
+https://stackoverflow.com/questions/27752840/mongo-aggregation-on-array-elements
+db.getCollection('chapters').find({ 
+    "chapter_content": { "$exists": true },
+    "$expr": { "$lt": [ { "$strLenCP": "$chapter_content" }, 100 ] } 
+})

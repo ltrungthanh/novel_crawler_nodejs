@@ -1,0 +1,28 @@
+{
+  "name": "comiccrawler",
+  "version": "1.0.0",
+  "description": "no",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "vdthuan",
+  "license": "ISC",
+  "dependencies": {
+    "basic-ftp": "^4.6.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.15",
+    "node-schedule": "^2.0.0",
+    "nodemon": "^2.0.7",
+    "puppeteer": "^7.1.0",
+    "puppeteer-extra": "^3.1.17",
+    "puppeteer-extra-plugin-stealth": "^2.7.5",
+    "request": "^2.88.2",
+    "user-agents": "^1.0.584"
+  }
+}

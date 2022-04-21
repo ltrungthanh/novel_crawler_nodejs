@@ -1,0 +1,11 @@
+<form action="/checkChapter" method="POST">
+    <div class="form-group">
+        <h3> {{result}}</h3>
+        <h3>Prev Link :{{prevChaperLink}}</h3>
+        <a target="_blank" href="{{currentLink}}">{{currentLink}}</a>
+        <label >Link Chapter</label>
+        <input name="link" type="text" class="form-control" aria-describedby="emailHelp"
+            placeholder="Enter chapter link">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
