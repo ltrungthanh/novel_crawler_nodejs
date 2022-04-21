@@ -1,1 +1,0 @@
-import{DeveloperResourcesView as e}from"./developer_resources.js";self.DeveloperResources=self.DeveloperResources||{},DeveloperResources=DeveloperResources||{},DeveloperResources.DeveloperResourcesView=e.DeveloperResourcesView;
